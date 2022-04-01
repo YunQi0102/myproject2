@@ -6,7 +6,7 @@ public class SilverCustomer extends Customer {
     }
     @Override
     public void print() {
-        float offMoney = (amount/1000)*off*1000;
-        System.out.println(id + "\t" + amount + "\t" + (amount-offMoney) + "\t" + "(" + offMoney + ")");
+        float money = amount-getOffMoney();
+        System.out.println(id + "\t" + amount + "\t" + money + "\t" + "(" + getOffMoney() + ")");
     }
 }

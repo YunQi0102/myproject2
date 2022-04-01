@@ -4,33 +4,46 @@ import java.util.Scanner;
 
 public class Tester {
     public static void main(String[] args) {
-        Ticket ticket = new Ticket(Station.TAIPEI_STATION, Station.KAOHSIUNG_STATION);
         Scanner scanner = new Scanner(System.in);
         System.out.println("Your start station? (1: Taipei, 2: Taichung, 3: Kaohsiung)");
         int choice = Integer.parseInt(scanner.next());
+        Station start = null;
         switch (choice) {
             case 1:
-                startStation = Station.TAIPEI_STATION;
+                start = Station.TAIPEI_STATION;
                 break;
             case 2:
-                startStation = Station.TAICHUNG_STATION;
+                start = Station.TAICHUNG_STATION;
                 break;
             case 3:
-                startStation = Station.KAOHSIUNG_STATION;
+                start = Station.KAOHSIUNG_STATION;
                 break;
         }
         System.out.println("Your destination station? (1:Taipei, 2:Taichung, 3:Kaohsiung)");
         choice = Integer.parseInt(scanner.next());
+        Station end = null;
         switch (choice) {
             case 1:
-                endStation = Station.TAIPEI_STATION;
+                end = Station.TAIPEI_STATION;
                 break;
             case 2:
-                endStation = Station.TAICHUNG_STATION;
+                end = Station.TAICHUNG_STATION;
                 break;
             case 3:
-                endStation = Station.KAOHSIUNG_STATION;
+                end = Station.KAOHSIUNG_STATION;
                 break;
         }
+        System.out.println("Which kind of ticket? (1:Normal, 2:Student, 3:Elder)");
+        choice = Integer.parseInt(scanner.next());
+        Ticket ticket = new Ticket(start, end);
+        switch (choice) {
+            case 1:
+                ticket = new Ticket(start, end);
+                break;
+            case 2:
+                ticket = new StudentTicket(start, end);
+                break;
+        }
+        ticket.print();
     }
 }
