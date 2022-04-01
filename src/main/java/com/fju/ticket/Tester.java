@@ -43,6 +43,9 @@ public class Tester {
             case 2:
                 ticket = new StudentTicket(start, end);
                 break;
+            case 3:
+                ticket = new ElderTicket(start, end);
+                break;
         }
         ticket.print();
     }
