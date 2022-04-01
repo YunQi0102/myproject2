@@ -19,9 +19,9 @@ public class SalesTester {
         customers.add(new SilverCustomer("0003", 2000));
         customers.add(new GoldenCustomer("0004", 5000));
         customers.add(new DiscountCustomer("0006", 900));
-        for (int i = 0; i < 5; i++) {
-            customers.get(i).print();
-        }
+//        for (int i = 0; i < 5; i++) {
+//            customers.get(i).print();
+//        }
         for (Customer c: customers) {
             c.print();
         }
