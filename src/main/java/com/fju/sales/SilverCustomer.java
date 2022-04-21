@@ -6,6 +6,10 @@ public class SilverCustomer extends Customer {
     }
     public void print() {
         float money = amount-getOffMoney();
-        System.out.println(id + "\t" + amount + "\t" + money + "\t" + "(" + (int)getOffMoney() + ")");
+        if (amount < 1000) {
+            System.out.println(id + " \t " + amount + " \t " + money + " \t " + "(" + (int)getOffMoney() + ")");
+        } else {
+            System.out.println(id + "\t" + amount + "\t" + money + "\t" + "(" + (int)getOffMoney() + ")");
+        }
     }
 }
