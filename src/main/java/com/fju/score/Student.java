@@ -1,7 +1,8 @@
 package com.fju.score;
 
+//Public:修飾字(子) Modifier--public/default(package)/private/protected(父子類別關係)
 public class Student implements Printable {
-    String name;
+    public String name;
     int english;
     int math;
     public Student(String name) {
