@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GuessFrame extends JFrame {
+    //Fields 屬性
     JButton button = new JButton("Click Here");
     JLabel label = new JLabel("Zzz...");
     //Constructors 建構子
@@ -26,7 +27,6 @@ public class GuessFrame extends JFrame {
         add(label);
         setVisible(true);
     }
-
     //Methods 方法
     public static void main(String[] args) {
         GuessFrame guessFrame = new GuessFrame();
