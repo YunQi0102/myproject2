@@ -4,11 +4,17 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
+import java.util.Scanner;
 
 public class GuessFrame extends JFrame {
     //Fields 屬性
-    JButton button = new JButton("Click Here");
-    JLabel label = new JLabel("Zzz...");
+    JButton button = new JButton("Guess!");
+    JLabel label = new JLabel("Enter a number 1-20: ");
+    JLabel label1 = new JLabel();
+    JTextField number = new JTextField(5);
+    Random random = new Random();
+    int secret = random.nextInt(20)+1;
     //Constructors 建構子
     public GuessFrame() {
         super();
@@ -18,13 +24,23 @@ public class GuessFrame extends JFrame {
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("Hello!");
-                label.setText("Hi");
+                int num = Integer.parseInt(number.getText());
+                System.out.println(num);
+                if (num < secret) {
+                    label1.setText("Bigger");
+                } else if (num > secret) {
+                    label1.setText("Smaller");
+                } else {
+                    label1.setText("Bingo!");
+                }
+                //label.setText("Hi!");
             }
         });
         setLayout(new FlowLayout());
-        add(button);
         add(label);
+        add(number);
+        add(button);
+        add(label1);
         setVisible(true);
     }
     //Methods 方法
