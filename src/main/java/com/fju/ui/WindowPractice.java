@@ -10,7 +10,7 @@ public class WindowPractice {
         JFrame frame = new JFrame();
         frame.setSize(600, 400);
         frame.setLocation(750, 150);
-        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         JButton button = new JButton("A");
         button.addActionListener(new ActionListener() {
