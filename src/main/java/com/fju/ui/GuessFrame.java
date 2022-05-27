@@ -9,8 +9,8 @@ import java.util.Scanner;
 
 public class GuessFrame extends JFrame {
     //Fields 屬性
-    JButton button = new JButton("Guess!");
-    JLabel label = new JLabel("Enter a number 1-20: ");
+    JButton button = new JButton("Guess");
+    JLabel label = new JLabel("Enter a number 1-20 :");
     JLabel label1 = new JLabel();
     JTextField number = new JTextField(5);
     Random random = new Random();
@@ -18,6 +18,7 @@ public class GuessFrame extends JFrame {
     //Constructors 建構子
     public GuessFrame() {
         super();
+        System.out.println("Secret number: " + secret);
         setSize(600, 400);
         setLocation(450, 200);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -31,9 +32,8 @@ public class GuessFrame extends JFrame {
                 } else if (num > secret) {
                     label1.setText("Smaller");
                 } else {
-                    label1.setText("Bingo!");
+                    label1.setText("Bingo! The secret number is " + secret + " !");
                 }
-                //label.setText("Hi!");
             }
         });
         setLayout(new FlowLayout());
