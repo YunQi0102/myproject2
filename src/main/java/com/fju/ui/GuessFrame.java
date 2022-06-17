@@ -24,7 +24,7 @@ public class GuessFrame extends JFrame {
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         button.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent actionEvent) {
+            public void actionPerformed(ActionEvent e) {
                 int num = Integer.parseInt(number.getText());
                 System.out.println(num);
                 if (num < secret) {
